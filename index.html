@@ -8,11 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tickethack</title>
     <link rel = 'stylesheet' href="style.css">
+    <link rel="preconnect"href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
 
 </head>
 <body>
     <header>
       <h1>Tickethack</h1>  
+      <a class="logo" href="">Tickethack</a>
     
     <nav>
         <a href="cart.html">Cart</a>
@@ -25,35 +30,23 @@
 <p>Compare, book and enjoy cheap prices for train tickets: your journey starts on Tickethack</p>
 
 <div class="container">
-    <div class=" cities">
-        <input type="text" id="daparture" placeolder="departure">
-        <input type="text" id="arrival" placeholder="arrival">
+    <div class="search-container">
+        <input type="text" id="departure" placeolder="Departure">
+        <input type="text" id="arrival" placeholder="Arrival">
 
         <input type="date" id="date">
         <button id="search">Search</button>
     </div>
 
     <div class="results-container" id="results">
-        <img src="image/train.png" alt=" Train" class=" train-icon">
+        <img src="images/train.png" alt=" Train" class=" train-icon">
         <hr>
         <p>It's time to book your future trip.</p>
     </div>
 
 </main>
  <script src="index.js"></script>
-
-
 </body>
-    <h2>book your trip</h2>
 
-    <input type="text" id="departure"  placeHolder="Departure">
-    <input type="text" id="arrival" placeHolder="Arrival">
-    <input type="text" id="date">
 
-   <button id="search" >Search</button>
-
-   <div id="results"></div>
-
-   <script src="index.js"></script>
-</body>
 </html>
