@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+}
+
+main {
+  background-image: url("background.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+}
+
+.results-container {
+  background-color: white;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+}
