@@ -1,5 +1,5 @@
 document.querySelector("#search").addEventListener("click", function () {
-  const departure = document.querySelector("departure").Value;
+  const departure = document.querySelector("#departure").value;
   const arrival = document.querySelector("#arrival").value;
   const date = document.querySelector("#date").value;
 

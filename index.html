@@ -1,52 +1,52 @@
-
-<!DOCTYPE html>
-<html 
-
- lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tickethack</title>
-    <link rel = 'stylesheet' href="style.css">
-    <link rel="preconnect"href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-      <h1>Tickethack</h1>  
-      <a class="logo" href="">Tickethack</a>
-    
-    <nav>
+      <h1>Tickethack</h1>
+
+      <nav>
         <a href="cart.html">Cart</a>
         <a href="'bookings.html">Bookings</a>
-    </nav>
-</header>
+      </nav>
+    </header>
 
-<main>
-<h2> Explore the world effortlessly by train</h2>
-<p>Compare, book and enjoy cheap prices for train tickets: your journey starts on Tickethack</p>
+    <main>
+      <h2>Explore the world effortlessly by train</h2>
+      <p>
+        Compare, book and enjoy cheap prices for train tickets: your journey
+        starts on Tickethack
+      </p>
 
-<div class="container">
-    <div class="search-container">
-        <input type="text" id="departure" placeolder="Departure">
-        <input type="text" id="arrival" placeholder="Arrival">
+      <div class="container">
+        <div class="search-container">
+          <div class="cities">
+            <input type="text" id="departure" placeholder="Departure" />
+            <input type="text" id="arrival" placeholder="Arrival" />
+          </div>
 
-        <input type="date" id="date">
-        <button id="search">Search</button>
-    </div>
+          <input type="date" id="date" />
+          <button id="search">Search</button>
+        </div>
 
-    <div class="results-container" id="results">
-        <img src="images/train.png" alt=" Train" class=" train-icon">
-        <hr>
-        <p>It's time to book your future trip.</p>
-    </div>
-
-</main>
- <script src="index.js"></script>
-</body>
-
-
+        <div class="results-container" id="results">
+          <img src="images/train.png" alt=" Train" class="train-icon" />
+          <hr />
+          <p>It's time to book your future trip.</p>
+        </div>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
 </html>

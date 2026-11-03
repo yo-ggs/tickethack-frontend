@@ -20,10 +20,11 @@ nav {
   gap: 20px;
 }
 
-nav {
+nav a {
   text-decoration: none;
   color: black;
 }
+
 main {
   background-image: url("images/background.jpg");
   background-size: cover;
@@ -33,20 +34,25 @@ main {
 
 .container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  gap: 40px;
+  align-items: center;
+  gap: 30px;
   padding: 40px;
 }
+
 .search-container {
   background-color: white;
-  width: 300px;
+  width: 230px;
   padding: 20px;
   border-radius: 10px;
+  min-height: 250px;
 }
 
 .results-container {
   background-color: white;
-  width: 300px;
+  width: 230px;
+  min-height: 250px;
   padding: 20px;
   border-radius: 10px;
 }
@@ -61,4 +67,49 @@ main {
 
 .train-icon {
   width: 80px;
+}
+
+main h2 {
+  text-align: center;
+  color: white;
+  margin-top: 0;
+  padding-top: 30px;
+}
+
+main > p {
+  text-align: center;
+  color: white;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.search-container input {
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #f0f0f0;
+}
+
+#search {
+  padding: 12px;
+  background-color: #459e85;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.results-container hr {
+  width: 80%;
+  border: 1px solid #459e85;
+  margin: 20px 0;
+}
+
+.cities {
+  display: flex;
+  flex-direction: column;
 }
