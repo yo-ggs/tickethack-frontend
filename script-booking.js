@@ -1,11 +1,12 @@
-fetch("http://localhost:3000/cart")
+fetch("http://localhost:3000/cart/bookings")
   .then((response) => response.json())
   .then((data) => {
-    const bookingList = document.querySelector("#booking-list");
-    bookingList.innerHTML = "";
+    if (data.result && data.bookings.length > 0) {
+      const mainContainer = document.querySelector(".main-container");
 
-    data.carts.forEach((trajet) => {
-      if (trajet.booking === true) {
+      let htmlContent = `<h1>My bookings</h1>`;
+
+      data.bookings.forEach((trajet) => {
         const now = new Date();
         const departureTime = new Date(trajet.date);
         const diffMs = departureTime - now;
@@ -27,7 +28,8 @@ fetch("http://localhost:3000/cart")
           timeRemainingText = "Departure passed";
         }
 
-        bookingList.innerHTML += `
+        // On ajoute chaque ligne de trajet
+        htmlContent += `
           <div class="travel-row">
             <div class="travel">${trajet.departure} > ${trajet.arrival}</div>
             <div class="hour">${new Date(trajet.date).toLocaleDateString("fr-FR")}</div>
@@ -36,6 +38,8 @@ fetch("http://localhost:3000/cart")
             <div class="departure">${timeRemainingText}</div>
           </div>
         `;
-      }
-    });
+      });
+
+      mainContainer.innerHTML = htmlContent;
+    }
   });
