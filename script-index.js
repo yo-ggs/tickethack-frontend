@@ -32,9 +32,10 @@ document.querySelector("#search").addEventListener("click", function () {
         }
       } else {
         document.querySelector(".results-container").innerHTML =
-          ` <img src="images/notfound.png" alt=" Not Found" class="icon" />
+          ` <div class="center-state"><img src="images/notfound.png" alt=" Not Found" class="icon" />
           <hr />
-          <p>No trip found</p>`;
+          <p>No trip found</p>
+          </div>`;
       }
     });
 });
