@@ -193,6 +193,13 @@ h1 {
 
 /*travel-row*/
 
+#cart-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .travel-row {
   box-sizing: border-box;
   padding: 1rem;
