@@ -4,4 +4,10 @@ document.querySelector("#search").addEventListener("click", function () {
   const date = document.querySelector("#date").value;
 
   console.log(departure, arrival, date);
+
+  fetch(`http://localhost:3000/trips/departure/${departure}`)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+    });
 });
