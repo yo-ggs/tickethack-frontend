@@ -209,6 +209,14 @@ h1 {
   align-items: center;
 }
 
+#booking-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .travel-row {
   box-sizing: border-box;
   padding: 1rem;
