@@ -8,7 +8,8 @@ fetch("http://localhost:3000/cart")
     <div class="travel-row">
       <div class="travel">${trajet.departure} > ${trajet.arrival}</div>
       <div class="hour">${new Date(trajet.date).toLocaleDateString("fr-FR")}</div>
-      <div class="price">${trajet.price}€</div>
+      <div class="hour">${new Date(trajet.date).toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" })}</div>
+ <div class="price">${trajet.price}€</div>
       <div class="btn">x</div>
     </div>
   `;
