@@ -39,3 +39,15 @@ fetch("http://localhost:3000/cart")
       });
     });
   });
+
+document.querySelector(".purchase").addEventListener("click", () => {
+  fetch("http://localhost:3000/cart/purchase", {
+    method: "PUT",
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.result) {
+        window.location.reload();
+      }
+    });
+});
