@@ -9,7 +9,7 @@ document.querySelector("#search").addEventListener("click", function () {
   console.log(departure, arrival, date);
 
   fetch(
-    `http://localhost:3000/trips?departure=${departure}&arrival=${arrival}&date=${date}`,
+    `https://tickethack-backend-puce-gamma.vercel.app/trips?departure=${departure}&arrival=${arrival}&date=${date}`,
   )
     .then((response) => response.json())
     .then((data) => {
@@ -49,7 +49,7 @@ document
       const tripId = event.target.getAttribute("data-id");
       const clickedButton = event.target;
 
-      fetch("http://localhost:3000/cart", {
+      fetch("https://tickethack-backend-puce-gamma.vercel.app/cart", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ tripId: tripId }),
@@ -65,11 +65,3 @@ document
         });
     }
   });
-
-/*page cart*/
-
-/*fetch pour récupérer les données en bdd*/
-
-/*page booking*/
-
-/*fetch pour récupérer les données en bdd*/

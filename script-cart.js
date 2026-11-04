@@ -1,4 +1,4 @@
-fetch("http://localhost:3000/cart")
+fetch("https://tickethack-backend-puce-gamma.vercel.app/cart")
   .then((response) => response.json())
   .then((data) => {
     const mainContainer = document.querySelector("#cart-container");
@@ -40,9 +40,12 @@ fetch("http://localhost:3000/cart")
 
     document.querySelectorAll(".btn").forEach((button) => {
       button.addEventListener("click", () => {
-        fetch(`http://localhost:3000/cart/${button.dataset.id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://tickethack-backend-puce-gamma.vercel.app/cart/${button.dataset.id}`,
+          {
+            method: "DELETE",
+          },
+        )
           .then((response) => response.json())
           .then((data) => {
             if (data.result) {
@@ -55,9 +58,12 @@ fetch("http://localhost:3000/cart")
     const purchaseBtn = document.querySelector(".purchase");
     if (purchaseBtn) {
       purchaseBtn.addEventListener("click", () => {
-        fetch("http://localhost:3000/cart/purchase", {
-          method: "PUT",
-        })
+        fetch(
+          "https://tickethack-backend-puce-gamma.vercel.app/cart/purchase",
+          {
+            method: "PUT",
+          },
+        )
           .then((response) => response.json())
           .then((data) => {
             if (data.result) {

@@ -1,4 +1,4 @@
-fetch("http://localhost:3000/cart/bookings")
+fetch("https://tickethack-backend-puce-gamma.vercel.app/cart/bookings")
   .then((response) => response.json())
   .then((data) => {
     if (data.result && data.bookings.length > 0) {
