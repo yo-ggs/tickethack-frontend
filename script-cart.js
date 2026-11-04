@@ -10,7 +10,9 @@ fetch("http://localhost:3000/cart")
       <div class="hour">${new Date(trajet.date).toLocaleDateString("fr-FR")}</div>
       <div class="hour">${new Date(trajet.date).toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" })}</div>
  <div class="price">${trajet.price}€</div>
-      <div class="btn">x</div>
+      
+<div class="btn" data-id="${trajet._id}">x</div>
+
     </div>
   `;
     });
@@ -22,4 +24,18 @@ fetch("http://localhost:3000/cart")
     });
 
     document.querySelector("#total").textContent = total;
+
+    document.querySelectorAll(".btn").forEach((button) => {
+      button.addEventListener("click", () => {
+        fetch(`http://localhost:3000/cart/${button.dataset.id}`, {
+          method: "DELETE",
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.result) {
+              window.location.reload();
+            }
+          });
+      });
+    });
   });
