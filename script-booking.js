@@ -28,7 +28,6 @@ fetch("http://localhost:3000/cart/bookings")
           timeRemainingText = "Departure passed";
         }
 
-        // On ajoute chaque ligne de trajet
         htmlContent += `
           <div class="travel-row">
             <div class="travel">${trajet.departure} > ${trajet.arrival}</div>
